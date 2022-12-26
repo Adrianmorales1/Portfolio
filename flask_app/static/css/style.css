@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.wrapper-text {
+    text-align: center;
+    border-radius: 0.25rem;
+    opacity: 0;
+    animation: ani2 1.5s ease-out forwards;
+}
+
+@keyframes ani2 {
+    100% {
+        opacity: 1;
+    }
+}
