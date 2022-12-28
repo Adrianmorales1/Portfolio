@@ -17,7 +17,18 @@ body {
     text-align: center;
     border-radius: 0.25rem;
     opacity: 0;
-    animation: ani2 1.5s ease-out forwards;
+    animation: ani2 5.0s ease-out forwards;
+}
+
+#wrapper-nav {
+    opacity: 0;
+    animation: ani1 6.0 ease-in-out;
+}
+
+@keyframes ani1 {
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes ani2 {
