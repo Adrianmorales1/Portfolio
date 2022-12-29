@@ -31,7 +31,7 @@
     </nav>
 
     <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light rounded-2" tabindex="0">
-    
+        
         <!--'Hello'-->
         <div class = "bg-primary container-fluid vh-100" id = "home" style="--bs-bg-opacity: .55;">
             <div class="row h-100 align-items-center">
@@ -42,6 +42,7 @@
             </div>  
         </div>
         <!--About Me-->
+        
         <div class = "container justify-content-center" id = "about">
             <div class="my-5 row justify-content-center">
                 <div class = "mt-5 col-12 text-center">
@@ -238,22 +239,22 @@
                         <img src="{{ url_for('static', filename='img/adrianmorales.jpg') }}" class = "rounded shadow-sm img-fluid" >
                     </div>
                     <div class="col-md-6 border border-secondary-subtle rounded shadow-sm p-4 d-flex align-items-stretch">
-                        <form action="" class="row align-items-center">
+                        <form action="/send_email" class="row align-items-center" method="post">
                             <div>
                                 <label class = "col-form-label col-form-label-lg">Name</label>
-                                <input type="text" name="name" class="form-control" placeholder="Enter Your Name">
+                                <input type="text" name="name" class="form-control"  placeholder="Enter Your Name" required>
                             </div>
                             <div>
                                 <label class = "col-form-label col-form-label-lg">Email</label>
-                                <input type="text" name="eamil" class="form-control"placeholder="Enter Your Email">
+                                <input type="text" name="email" class="form-control"placeholder="Enter Your Email" required>
                             </div>
                             <div>
                                 <label class = "col-form-label col-form-label-lg">Message</label>
-                                <textarea name="message" class="form-control" placeholder="Enter Your Message"></textarea>
+                                <textarea name="message" class="form-control pb-5" placeholder="Enter Your Message" required></textarea>
                             </div>
 
                             <div class="d-grid gap-2 justify-content-end">
-                                <button type="button" class="btn btn-primary mt-2">Submit</button>
+                                <button class="btn btn-primary mt-2">Submit</button>
                             </div>
                         </form>
                     </div>
