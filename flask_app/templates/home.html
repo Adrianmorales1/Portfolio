@@ -42,6 +42,23 @@
             </div>  
         </div>
         <!--About Me-->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                <div class="toast fade show position-fixed bottom-0 end-0  m-3" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <img src="{{ url_for('static', filename='img/letterA.png') }}" width="30" height="30">
+                        <strong class="me-auto px-2">Message Sent</strong>
+                        <small class="text-muted"></small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body bg-secondary" style="--bs-bg-opacity: .20;">
+                        {{message}}
+                    </div>
+                  </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
         
         <div class = "container justify-content-center" id = "about">
             <div class="my-5 row justify-content-center">
@@ -286,6 +303,7 @@
             </footer>
         </div>
     </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 </body>

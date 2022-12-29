@@ -15,4 +15,6 @@ def sending_email():
     }
     email = Email()
     email.send_email(data)
+    info = "hello " + request.form['name'] + ", Your message has been sent!"
+    flash(info, "email")
     return redirect('/')
